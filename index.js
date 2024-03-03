@@ -26,8 +26,8 @@ function addItem() {
       text = 'Item ' + (table.rows.length);
     } else if (i === cells - 1) {
       cell.innerHTML = '<td class="action-buttons" style="padding: 5px 10px;">' +
-      '<button style="cursor: pointer; transition: background-color 0.3s ease; padding: 5px 10px; margin-right: 5px; background-color: #f0f0f0;" onmouseover="this.style.backgroundColor=\'#ddd\'" onmouseout="this.style.backgroundColor=\'#f0f0f0\'" onclick="addItem(this)">Add</button>' +
-      '<button style="cursor: pointer; transition: background-color 0.3s ease; padding: 5px 10px; background-color: #f0f0f0;" onmouseover="this.style.backgroundColor=\'#ddd\'" onmouseout="this.style.backgroundColor=\'#f0f0f0\'" onclick="deleteItem(this)">Delete</button>' +
+      '<button class="btn btn-outline-primary" style="cursor: pointer;  padding: 5px 10px; margin-right: 5px; "  onclick="addItem(this)">Add</button>' +
+      '<button class="btn btn-outline-danger" style="cursor: pointer;  padding: 5px 10px; "  onclick="deleteItem(this)">Delete</button>' +
   '</td>';
   
       text = '0.00';

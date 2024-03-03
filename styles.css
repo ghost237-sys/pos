@@ -1,11 +1,12 @@
 .nav-bar{
   margin-top: 20px;
-  background-color: hsl(0, 2%, 24%);
 }
 
 
 .items-container {
   display: flex;
+  background-color: hsla(0, 1%, 31%, 0.616);
+  margin-top: 20px;
 }
 #item-table {
   border-collapse: collapse;
@@ -32,9 +33,7 @@ td[contenteditable=true]:hover {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.action-buttons button:hover {
-  background-color: #ddd;
-}
+
 
 #keypad {
   width: 25%;
@@ -59,4 +58,8 @@ td[contenteditable=true]:hover {
 .square-key {
   width: 100%;
   padding: 10px;
+}
+
+.footer{
+  margin-top: 20px;
 }
