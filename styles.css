@@ -1,0 +1,62 @@
+.nav-bar{
+  margin-top: 20px;
+  background-color: hsl(0, 2%, 24%);
+}
+
+
+.items-container {
+  display: flex;
+}
+#item-table {
+  border-collapse: collapse;
+  width: 75%;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background-color: #f2f2f2;
+}
+td[contenteditable=true] {
+  outline: none;
+  cursor: pointer;
+}
+td[contenteditable=true]:hover {
+  background-color: #f0f0f0;
+}
+.action-buttons button {
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.action-buttons button:hover {
+  background-color: #ddd;
+}
+
+#keypad {
+  width: 25%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+.key {
+  padding: 10px;
+  text-align: center;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.key:hover {
+  background-color: blue;
+  color: white;
+}
+.square-key {
+  width: 100%;
+  padding: 10px;
+}
