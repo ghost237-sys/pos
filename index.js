@@ -1,6 +1,7 @@
-document.querySelectorAll('.qty, .unit-price').forEach(function(element) {
-  element.addEventListener('input', function() {
-    var row = this.closest('tr');
+document.querySelector('table').addEventListener('input', function(event) {
+  var target = event.target;
+  if (target.classList.contains('qty') || target.classList.contains('unit-price')) {
+    var row = target.closest('tr');
     var qty = parseFloat(row.querySelector('.qty').textContent);
     var unitPrice = parseFloat(row.querySelector('.unit-price').textContent);
     var totalPrice = qty * unitPrice;
@@ -8,7 +9,7 @@ document.querySelectorAll('.qty, .unit-price').forEach(function(element) {
       row.querySelector('.total-price').textContent = totalPrice.toFixed(2);
       updateTotalPrice(); // Update total price when any value is changed
     }
-  });
+  }
 });
 
 function addItem() {
@@ -24,13 +25,17 @@ function addItem() {
     } else if (i === 1) {
       text = 'Item ' + (table.rows.length);
     } else if (i === cells - 1) {
-      cell.innerHTML = '<button onclick="addItem(this)">Add</button> <button onclick="deleteItem(this)">Delete</button>';
-    } else {
+      cell.innerHTML = '<td class="action-buttons" style="padding: 5px 10px;">' +
+      '<button style="cursor: pointer; transition: background-color 0.3s ease; padding: 5px 10px; margin-right: 5px; background-color: #f0f0f0;" onmouseover="this.style.backgroundColor=\'#ddd\'" onmouseout="this.style.backgroundColor=\'#f0f0f0\'" onclick="addItem(this)">Add</button>' +
+      '<button style="cursor: pointer; transition: background-color 0.3s ease; padding: 5px 10px; background-color: #f0f0f0;" onmouseover="this.style.backgroundColor=\'#ddd\'" onmouseout="this.style.backgroundColor=\'#f0f0f0\'" onclick="deleteItem(this)">Delete</button>' +
+  '</td>';
+  
       text = '0.00';
     }
     if (i !== cells - 1) {
       cell.contentEditable = true;
       cell.textContent = text;
+      cell.classList.add(['qty', 'description', 'amt', 'unit-price','total-price'][i]); 
     }
   }
   updateTotalPrice();
@@ -68,5 +73,5 @@ function updateTotalPrice() {
   totalCell.forEach(function(cell) {
     totalPrice += parseFloat(cell.textContent);
   });
-  document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+  document.getElementById('total').textContent = totalPrice.toFixed(2);
 }
