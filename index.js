@@ -29,8 +29,8 @@ function addItem() {
       '<button class="btn btn-outline-primary" style="cursor: pointer;  padding: 5px 10px; margin-right: 5px; "  onclick="addItem(this)">Add</button>' +
       '<button class="btn btn-outline-danger" style="cursor: pointer;  padding: 5px 10px; "  onclick="deleteItem(this)">Delete</button>' +
   '</td>';
-  
-      text = '0.00';
+    }else{
+    text = '0.00';
     }
     if (i !== cells - 1) {
       cell.contentEditable = true;
