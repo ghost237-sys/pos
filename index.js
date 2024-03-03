@@ -47,24 +47,43 @@ function deleteItem(button) {
   updateTotalPrice();
 }
 
+var activeCell = null;
+
+document.getElementById('item-table').addEventListener('click', function(event) {
+  var target = event.target;
+  if (target.tagName === 'TD' && target.contentEditable === 'true') {
+      activeCell = target;
+  }
+});
+
+function updateActiveCell(value) {
+  if (activeCell) {
+      if (!isNaN(value) || value === '0') {
+          activeCell.textContent += value;
+      }
+  }
+}
 
 
 function deleteLastCharacter() {
-  var activeElement = document.activeElement;
-  activeElement.textContent = activeElement.textContent.slice(0, -1);
-  updateTotalPrice();
-}
-
-
-function updateCellValue(value) {
-  var activeElement = document.activeElement;
-  if (activeElement && activeElement.tagName === "TD") {
-    if (!isNaN(value) || value === '0') {
-      activeElement.textContent += value;
-    }
+  if (activeCell) {
+      activeCell.textContent = activeCell.textContent.slice(0, -1);
   }
-  updateTotalPrice();
 }
+
+
+
+var keypadButtons = document.querySelectorAll('#keypad .key');
+keypadButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        var value = this.textContent;
+        if (value === 'DEL') {
+            deleteLastCharacter();
+        } else {
+            updateActiveCell(value);
+        }
+    });
+});
 
 
 function updateTotalPrice() {
@@ -75,3 +94,45 @@ function updateTotalPrice() {
   });
   document.getElementById('total').textContent = totalPrice.toFixed(2);
 }
+
+
+
+function moveActiveCell(direction) {
+  if (activeCell) {
+      var currentRowIndex = activeCell.parentNode.rowIndex;
+      var currentCellIndex = activeCell.cellIndex;
+      var newRow, newCell;
+      
+      switch (direction) {
+          case 'up':
+              newRow = currentRowIndex - 1;
+              newCell = activeCell.parentNode.parentNode.rows[newRow].cells[currentCellIndex];
+              break;
+          case 'down':
+              newRow = currentRowIndex + 1;
+              newCell = activeCell.parentNode.parentNode.rows[newRow].cells[currentCellIndex];
+              break;
+          case 'left':
+              newCell = activeCell.parentNode.cells[currentCellIndex - 1];
+              break;
+          case 'right':
+              newCell = activeCell.parentNode.cells[currentCellIndex + 1];
+              break;
+      }
+      
+      if (newCell && newCell.contentEditable === 'true') {
+          activeCell = newCell;
+      }
+  }
+}
+
+var arrowButtons = document.querySelectorAll('#keypad .arrow');
+arrowButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        var direction = this.dataset.direction;
+        moveActiveCell(direction);
+    });
+});
+
+
+

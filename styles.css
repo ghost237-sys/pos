@@ -55,6 +55,19 @@ td[contenteditable=true]:hover {
   background-color: blue;
   color: white;
 }
+
+.arrow{
+  padding: 10px;
+  text-align: center;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.arrow:hover{
+  background-color: blue;
+  color: white;
+}
+
 .square-key {
   width: 100%;
   padding: 10px;

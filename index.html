@@ -82,24 +82,24 @@
         
           <div id="keypad">
             <div class="keypad">
-              <div class="key square-key" onclick="updateCellValue(1)">1</div>
-              <div class="key square-key" onclick="updateCellValue(2)">2</div>
-              <div class="key square-key" onclick="updateCellValue(3)">3</div>
-              <div class="key square-key" onclick="updateCellValue(4)">4</div>
-              <div class="key square-key" onclick="updateCellValue(5)">5</div>
-              <div class="key square-key" onclick="updateCellValue(6)">6</div>
-              <div class="key square-key" onclick="updateCellValue(7)">7</div>
-              <div class="key square-key" onclick="updateCellValue(8)">8</div>
-              <div class="key square-key" onclick="updateCellValue(9)">9</div>
-              <div class="key square-key">*</div>
-              <div class="key square-key" onclick="updateCellValue(0)">0</div>
-              <div class="key square-key">#</div>
-              <div class="key square-key" onclick="deleteLastCharacter()">DEL</div>
-              <div class="key square-key"></div>
-              <div class="key square-key" onclick="moveCursor('up')">&uarr;</div>
-              <div class="key square-key" onclick="moveCursor('left')">&larr;</div>
-              <div class="key square-key" onclick="moveCursor('down')">&darr;</div>
-              <div class="key square-key" onclick="moveCursor('right')">&rarr;</div>
+              <div class="key" onclick="updateCellValue(1)">1</div>
+              <div class="key" onclick="updateCellValue(2)">2</div>
+              <div class="key" onclick="updateCellValue(3)">3</div>
+              <div class="key" onclick="updateCellValue(4)">4</div>
+              <div class="key" onclick="updateCellValue(5)">5</div>
+              <div class="key" onclick="updateCellValue(6)">6</div>
+              <div class="key" onclick="updateCellValue(7)">7</div>
+              <div class="key" onclick="updateCellValue(8)">8</div>
+              <div class="key" onclick="updateCellValue(9)">9</div>
+              <div class="key">*</div>
+              <div class="key" onclick="updateCellValue(0)">0</div>
+              <div class="key">#</div>
+              <div class="key" onclick="deleteLastCharacter()">DEL</div>
+              <div class="arrow" data-direction="up" onclick="moveCursor('up')">&uarr;</div>
+              <div class="key"  onclick="addItem()">AddItem</div>
+              <div class="arrow" data-direction="left" onclick="moveCursor('left')">&larr;</div>
+              <div class="arrow" data-direction="down" onclick="moveCursor('down')">&darr;</div>
+              <div class="arrow" data-direction="right" onclick="moveCursor('right')">&rarr;</div>
             </div>
           </div>
         </div>
