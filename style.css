@@ -1,0 +1,175 @@
+body{
+    background-color:hsl(0, 10%, 94%);
+    max-height: 1440px;
+}
+.container{
+    margin-left: 200px;
+    background-color:hsl(0, 10%, 94%);
+}
+
+
+.sidebar {
+    height: 100%;
+    width: 200px; 
+    background-color: #333;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.search-bar{
+    margin: 10px;
+    height: 110px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search-bar input{
+    margin-top: 20px;
+    height: 40px;
+}
+
+.search-button{
+    margin-top:25px ;
+    height: 40px;
+    width: 40px;
+}
+
+#custom{
+    height: 40px;
+    width: 150px;
+}
+
+
+
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+.collapsed .sidebar a  {
+    display: none;
+}
+
+
+
+.main-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+}
+
+
+
+.items-table{
+    width: 950px;
+    display: flex;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 5px;
+    margin-top: -100px;
+    margin-left: 10px;
+}
+
+
+#item-table {
+    border-collapse: collapse;
+    width: 950px;
+}
+
+
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+td:nth-child(1){
+    width: 250px;
+}
+
+td:nth-child(5) #disc{
+    padding: 5px;
+    background-color: hsla(160, 65%, 51%, 0.623);
+}
+
+td:nth-child(7) button{
+    width: 50px;
+    border: 0px;
+    background-color: white;
+}
+
+td:nth-child(7) img:hover{
+    cursor: pointer;
+    background-color: hsla(0, 94%, 65%, 0.397);
+}
+
+td:nth-child(7) img{
+    color: red;
+}
+
+th {
+    background-color: hsla(160, 65%, 51%, 0.623);
+  }
+
+td[contenteditable=true] {
+    outline: none;
+    cursor: pointer;
+}
+
+td[contenteditable=true]:hover {
+    background-color: #f0f0f0;
+}
+
+
+.header{
+    margin-top: -20px;
+    margin-left: 190px;
+    height: 80px;
+    width: 100vw;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 0px solid black;
+
+}
+
+
+button{
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.side-payment{
+    margin-left:20px ;
+    width: 350px;
+    height: 600px;
+    border: solid 0px black;
+    grid-column: 2 / span 1;
+    grid-row: span 2;
+    padding: 20px;
+    padding-top: 40px;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+    
+label{
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+
+
