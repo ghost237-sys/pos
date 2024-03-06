@@ -1,124 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    
+
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="header">
-        <header>
-            <h1>POSHUB</h1>
-        </header>
-    </div>
 
     <div class="container">
-        
 
-        <div class="main-content">
-            <div class="search-bar">
-                <form class="search" role="search">
-                    <input type="search" placeholder="Search item. . ." aria-label="Search">
-                    <button  class="search-button" type="submit"><img src="search-outline (1).svg"></button>
-                    <button id="custom">Cancel Sale</button>
-                    <button id="custom">Pause</button>
-                </form>
 
-                
-            
-            </div>
-            
-            <div class="sidebar">
-    
-                <a href="#">Dashboard</a>
-                <a href="#">Sales</a>
-                <a href="#">Stock Entry</a>
-                <a href="#">Receipts</a>
-                <a href="#">Products</a>
-                <a href="#">Reports</a>
-            </div>
-    
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="logo.png" alt="logo">
+                    </span>
 
-    
-            <div class="side-payment">
-                <label>Subtotal</label><hr>
-                <label>Discounts</label><hr>
-                <label for="">TOTAL</label><hr>
-                <label></label>
-                <div class="payment-mehtods">
-                    <h1>ADD PAYMENT</h1>
-                    <button id="cash">CASH</button>
-                    <label for="cash">0.00</label><br>
-
-                    <button id="mpesa">M-Pesa</button>
-                    <label for="mpesa">0.00</label><br>
-
-                    <button id="debit-card">Debit Card</button>
-                    <label for="debit-card">0.00</label>
-
-                    <button id="end-button">END SALE</button>
+                    <div class="text header-texxt">
+                        <span class="name">POSHUB</span>
+                        <span class="profession">Pos System</span>
+                    </div>
                 </div>
 
+                <i class="bx bx-chevron-right toggle"></i>
+            </header>
+            <div class="menu-bar">
+                <div class="menu">
+
+                    <li class="search-box">
+                        <ion-icon class="icon" name="search-outline"></ion-icon>
+                        <input type="search" placeholder="Search...">
+                    </li>
+
+                    <ul class="menu-links"></ul>
+                    <li class="nav-link">
+                        <a href="#">
+                            <ion-icon class="icon" name="home-outline"></ion-icon>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <ion-icon class="icon" name="cart-outline"></ion-icon>
+                            <span class="text nav-text">Sales</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <ion-icon class="icon" name="calculator-outline"></ion-icon>
+                            <span class="text nav-text">Stock Entry</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <ion-icon class="icon" name="receipt-outline"></ion-icon>
+                            <span class="text nav-text">Receipts</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <ion-icon class="icon" name="pricetag-outline"></ion-icon>
+                            <span class="text nav-text">Products</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <ion-icon class="icon" name="stats-chart-outline"></ion-icon>
+                            <span class="text nav-text">Reports</span>
+                        </a>
+                    </li>
+                    </ul>
+                </div>
+
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="#">
+                            <ion-icon class="icon" name="log-out-outline"></ion-icon>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="moon-sun">
+                            <i class="moon-icon moon"></i>
+                            <i class="sun-icon sun"></i>
+                        </div>
+                        <span class="mode-text text">Dark Mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
             </div>
 
+        </nav>
 
-            <div class="items-table">
-                <table border="1" id="item-table">
-                    <thead>
-                      <tr>
-                        <th>Item</th>
-                        <th>Unit Price</th>
-                        <th>Qty.</th>
-                        <th>Total price</th>
-                        <th>Disc.</th>
-                        <th>Subtotal</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                          <td contenteditable="true" class="item">Ugali ya soko</td>
-                          <td contenteditable="true" class="Unit-price">10.00</td>
-                          <td contenteditable="true" class="qty">1</td>
-                          <td contenteditable="true" class="total-price">10.00</td>
-                          <td contenteditable="true" class="discount"><div id="disc">-10%</div></td>
-                          <td contenteditable="true" class="Subtotal">5.00</td>
-                          <td><button><img src="trash-outline.svg"></button></td>
-                        </tr>
+        <div class="dashboard">
+            <div class="header">
+                <h1>Dashboard</h1>
+            </div>
                         
-                        <tr>
-                            <td contenteditable="true" class="item">Ugali ya soko</td>
-                            <td contenteditable="true" class="Unit-price">10.00</td>
-                            <td contenteditable="true" class="qty">1</td>
-                            <td contenteditable="true" class="total-price">10.00</td>
-                            <td contenteditable="true" class="discount">5.00</td>
-                            <td contenteditable="true" class="Subtotal">5.00</td>
-                            <td><button><img src="trash-outline.svg"></button></td>
-                        </tr>
 
-                        <tr>
-                            <td contenteditable="true" class="item">Ugali ya soko</td>
-                            <td contenteditable="true" class="Unit-price">10.00</td>
-                            <td contenteditable="true" class="qty">1</td>
-                            <td contenteditable="true" class="total-price">10.00</td>
-                            <td contenteditable="true" class="discount">5.00</td>
-                            <td contenteditable="true" class="Subtotal">5.00</td>
-                            <td><button><img src="trash-outline.svg"></button></td>
-                        </tr>
+            <div class="main-content">
 
-                    </tbody>
-                  </table>
 
+                <div class="search-tab">
+                    <form class="search" role="search">
+                        <input type="search" placeholder="Search item. . ." aria-label="Search">
+                        <button class="search-button" type="submit"><img src="search-outline (1).svg"></button>
+                        <button id="custom">Cancel Sale</button>
+                        <button id="custom">Pause</button>
+                    </form>
+    
+                </div>
+
+                <div class="side-payment">
+                    <label>Subtotal</label>
+                    <hr>
+                    <label>Discounts</label>
+                    <hr>
+                    <label for="">TOTAL</label>
+                    <hr>
+                    <label></label>
+                    <div class="payment-mehtods">
+                        <h1>ADD PAYMENT</h1>
+                        <button id="cash">CASH</button>
+                        <label for="cash">0.00</label><br>
+
+                        <button id="mpesa">M-Pesa</button>
+                        <label for="mpesa">0.00</label><br>
+
+                        <button id="debit-card">Debit Card</button>
+                        <label for="debit-card">0.00</label>
+
+                        <button id="end-button">END SALE</button>
+                    </div>
+
+                </div>
+
+
+                <div class="items-table">
+                    <table border="1" id="item-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Unit Price</th>
+                                <th>Qty.</th>
+                                <th>Total price</th>
+                                <th>Disc.</th>
+                                <th>Subtotal</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td contenteditable="true" class="item">Ugali ya soko</td>
+                                <td contenteditable="true" class="Unit-price">10.00</td>
+                                <td contenteditable="true" class="qty">1</td>
+                                <td contenteditable="true" class="total-price">10.00</td>
+                                <td contenteditable="true" class="discount">
+                                    <div id="disc">-10%</div>
+                                </td>
+                                <td contenteditable="true" class="Subtotal">5.00</td>
+                                <td><button><img src="trash-outline.svg"></button></td>
+                            </tr>
+
+                            <tr>
+                                <td contenteditable="true" class="item">Ugali ya soko</td>
+                                <td contenteditable="true" class="Unit-price">10.00</td>
+                                <td contenteditable="true" class="qty">1</td>
+                                <td contenteditable="true" class="total-price">10.00</td>
+                                <td contenteditable="true" class="discount">5.00</td>
+                                <td contenteditable="true" class="Subtotal">5.00</td>
+                                <td><button><img src="trash-outline.svg"></button></td>
+                            </tr>
+
+                            <tr>
+                                <td contenteditable="true" class="item">Ugali ya soko</td>
+                                <td contenteditable="true" class="Unit-price">10.00</td>
+                                <td contenteditable="true" class="qty">1</td>
+                                <td contenteditable="true" class="total-price">10.00</td>
+                                <td contenteditable="true" class="discount">5.00</td>
+                                <td contenteditable="true" class="Subtotal">5.00</td>
+                                <td><button><img src="trash-outline.svg"></button></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true" class="item">Ugali ya soko</td>
+                                <td contenteditable="true" class="Unit-price">10.00</td>
+                                <td contenteditable="true" class="qty">1</td>
+                                <td contenteditable="true" class="total-price">10.00</td>
+                                <td contenteditable="true" class="discount">5.00</td>
+                                <td contenteditable="true" class="Subtotal">5.00</td>
+                                <td><button><img src="trash-outline.svg"></button></td>
+                            </tr>
+
+                            <tr>
+                                <td contenteditable="true" class="item">Ugali ya soko</td>
+                                <td contenteditable="true" class="Unit-price">10.00</td>
+                                <td contenteditable="true" class="qty">1</td>
+                                <td contenteditable="true" class="total-price">10.00</td>
+                                <td contenteditable="true" class="discount">5.00</td>
+                                <td contenteditable="true" class="Subtotal">5.00</td>
+                                <td><button><img src="trash-outline.svg"></button></td>
+                            </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+
+                </div>
             </div>
-
-
         </div>
 
-        
+
+
+
+
+
+
     </div>
 
-    <script src=""></script>
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
