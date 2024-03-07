@@ -298,18 +298,51 @@ body.dark .switch::before{
 .main-content{
     display: grid;
     grid-template-columns: 950px 950px; 
-    grid-template-rows: 40px  -40px;
+    grid-template-rows: 110px ;
     gap: 10px;
 }
 
 .search-tab{
+    display: flex;
     margin-left: 12px;
+    align-items: center;
+    justify-content: center;
     width: 950px;
     background-color: var(--sidebar-color);
     border-radius: 6px;
+    height: 100px;
 }
 
+.search-tab input{
+    margin-left: 20px;
+    height: 50px;
+    width: 320px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background:var(--primary-color-light);
+}
 
+.search-tab .icon{
+    justify-content: center;
+    background-color: var(--primary-color-light);
+}
+
+.search-tab #cancel,
+#pause{
+    width: 80px;
+    font-size: 17px;
+    height: 30px;
+    border-radius: 4px;
+    list-style-type: none;
+    background-color: var(--primary-color);
+    color: var(--primary-color-light);
+}
+
+.search-tab #cancel{
+    margin-left: 280px;
+    width: 120px;
+}
 
 .items-table{
     width: 950px;
@@ -426,4 +459,39 @@ label{
 }
 
 
+.payment-methods #title{
+    font-weight: 600;
+}
+
+.payment-methods{
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-methods #cash,
+#mpesa,
+#debit-card,
+#end-button{ 
+    width: 80px;
+    font-size: 17px;
+    height: 30px;
+    border-radius: 4px;
+    list-style-type: none;
+    background-color: var(--primary-color);
+    color: var(--primary-color-light);
+}
+
+.payment-methods #debit-card{ 
+    width: 100px;
+}
+
+.payment-methods label{
+    margin-left: 80px;    
+}
+
+.payment-methods #end-button{
+    width: 120px;
+    margin:80px;
+
+}
 

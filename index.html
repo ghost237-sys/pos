@@ -117,12 +117,11 @@
 
                 <div class="search-tab">
                     <form class="search" role="search">
-                        <input type="search" placeholder="Search item. . ." aria-label="Search">
-                        <button class="search-button" type="submit"><img src="search-outline (1).svg"></button>
-                        <button id="custom">Cancel Sale</button>
-                        <button id="custom">Pause</button>
-                    </form>
-    
+                        <input type="search" placeholder="Search...">
+                        <ion-icon class="icon" name="search-outline"></ion-icon>
+                    </form>    
+                    <button id="cancel">Cancel Sale</button>
+                    <button id="pause">Pause</button>
                 </div>
 
                 <div class="side-payment">
@@ -132,17 +131,21 @@
                     <hr>
                     <label for="">TOTAL</label>
                     <hr>
+                    <label>paid</label>    <label>Due</label>
+                    <hr>
                     <label></label>
-                    <div class="payment-mehtods">
-                        <h1>ADD PAYMENT</h1>
+                    <div class="payment-methods title" >
+                        <p id="title">ADD PAYMENT</p>
+
                         <button id="cash">CASH</button>
-                        <label for="cash">0.00</label><br>
+                        <span><label for="cash">0.00</label><br></span>
+
 
                         <button id="mpesa">M-Pesa</button>
-                        <label for="mpesa">0.00</label><br>
+                        <span><label for="mpesa">0.00</label><br></span>
 
                         <button id="debit-card">Debit Card</button>
-                        <label for="debit-card">0.00</label>
+                        <span><label for="debit-card">0.00</label><br></span>
 
                         <button id="end-button">END SALE</button>
                     </div>
