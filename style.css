@@ -164,7 +164,7 @@ header .image-text .header-text{
 }
 
 .sidebar.close header .toggle{
-    transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%);
 }
 
 body.dark .sidebar header .toggle{
